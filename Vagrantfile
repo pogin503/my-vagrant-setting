@@ -18,8 +18,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #   #   cmd: "bash -l",
   #   #   args: "-v 'vagrant:/var/www'"
   # end
-
+  config.vm.synced_folder "../source", "/home/vagrant/source", :create => true, :owner => 'vagrant', :group => 'vagrant', :mount_options => ['dmode=777', 'fmode=666']
   config.vm.provision "shell", path: "script.sh"
+
+  config.vm.provision "shell", path: "install_yaourt.sh",privileged: false
+
+
+
 
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
