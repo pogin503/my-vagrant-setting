@@ -11,7 +11,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Every Vagrant virtual environment requires a box to build off of.
   config.vm.box = "arch64"
-
+  config.vm.box_url = "https://dl.dropboxusercontent.com/u/31112574/arch64-20130801.box"
   # config.vm.provision  "docker" do |d|
 
   #   # d.run "arch",
