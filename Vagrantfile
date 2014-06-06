@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 
 # Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
-VAGRANTFILE_API_VERSION = "2"
+VAGRANTFILE_API_VERSION = '2'
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # All Vagrant configuration is done here. The most common configuration
@@ -10,30 +10,29 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "arch64"
-  config.vm.box_url = "https://dl.dropboxusercontent.com/u/31112574/arch64-20130801.box"
-  # config.vm.provision  "docker" do |d|
+  config.vm.box = 'arch64'
+  config.vm.box_url = 'https://dl.dropboxusercontent.com/u/31112574/arch64-20130801.box'
+  # config.vm.provision  'docker' do |d|
 
-  #   # d.run "arch",
-  #   #   cmd: "bash -l",
-  #   #   args: "-v 'vagrant:/var/www'"
+  #   # d.run 'arch',
+  #   #   cmd: 'bash -l',
+  #   #   args: '-v 'vagrant:/var/www''
   # end
-  config.vm.synced_folder "../source", "/home/vagrant/source",
-              :create => true, :owner => 'vagrant', :group => 'vagrant',
-              :mount_options => ['dmode=777', 'fmode=766']
+  config.vm.synced_folder '../source', '/home/vagrant/source',
+                          create: true, owner: 'vagrant',
+                          group: 'vagrant',
+                          mount_options: ['dmode=777', 'fmode=766']
 
-  config.vm.provision "shell", path: "script.sh"
-
-  config.vm.provision "shell", path: "install_yaourt.sh",privileged: false
-  config.vm.provision "shell", path: "install_user.sh",privileged: false
-  config.vm.provider "virtualbox" do |v|
+  config.vm.provision 'shell', path: 'script.sh'
+  config.vm.provision 'shell', path: 'install_yaourt.sh', privileged: false
+  config.vm.provision 'shell', path: 'install_user.sh', privileged: false
+  config.vm.provider 'virtualbox' do |v|
     # v.gui = true
   end
 
-
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
-  # config.vm.box_url = "http://domain.com/path/to/above.box"
+  # config.vm.box_url = 'http://domain.com/path/to/above.box'
 
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
@@ -42,7 +41,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
-  # config.vm.network :private_network, ip: "192.168.33.10"
+  # config.vm.network :private_network, ip: '192.168.33.10'
 
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
@@ -57,7 +56,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-  # config.vm.synced_folder "../data", "/vagrant_data"
+  # config.vm.synced_folder '../data', '/vagrant_data'
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
@@ -68,7 +67,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #   vb.gui = true
   #
   #   # Use VBoxManage to customize the VM. For example to change memory:
-  #   vb.customize ["modifyvm", :id, "--memory", "1024"]
+  #   vb.customize ['modifyvm', :id, '--memory', '1024']
   # end
   #
   # View the documentation for the provider you're using for more
@@ -102,14 +101,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # some recipes and/or roles.
   #
   # config.vm.provision :chef_solo do |chef|
-  #   chef.cookbooks_path = "../my-recipes/cookbooks"
-  #   chef.roles_path = "../my-recipes/roles"
-  #   chef.data_bags_path = "../my-recipes/data_bags"
-  #   chef.add_recipe "mysql"
-  #   chef.add_role "web"
-  #
+  #   # chef.cookbooks_path = '../my-recipes/cookbooks'
+  #   # chef.roles_path = '../my-recipes/roles'
+  #   # chef.data_bags_path = '../my-recipes/data_bags'
+  #   # chef.add_recipe 'mysql'
+  #   # chef.add_role 'web'
+
   #   # You may also specify custom JSON attributes:
-  #   chef.json = { :mysql_password => "foo" }
+  #   # chef.json = { mysql_password: 'foo' }
   # end
 
   # Enable provisioning with chef server, specifying the chef server URL,
@@ -123,8 +122,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # validation key to validation.pem.
   #
   # config.vm.provision :chef_client do |chef|
-  #   chef.chef_server_url = "https://api.opscode.com/organizations/ORGNAME"
-  #   chef.validation_key_path = "ORGNAME-validator.pem"
+  #   chef.chef_server_url = 'https://api.opscode.com/organizations/ORGNAME'
+  #   chef.validation_key_path = 'ORGNAME-validator.pem'
   # end
   #
   # If you're using the Opscode platform, your validator client is
@@ -133,5 +132,5 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # If you have your own Chef Server, the default validation client name is
   # chef-validator, unless you changed the configuration.
   #
-  #   chef.validation_client_name = "ORGNAME-validator"
+  #   chef.validation_client_name = 'ORGNAME-validator'
 end
