@@ -24,12 +24,17 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
                           group: 'vagrant',
                           mount_options: ['dmode=777', 'fmode=766']
 
-  config.vm.provision 'shell', path: 'script.sh'
-  config.vm.provision 'shell', path: 'install_yaourt.sh', privileged: false
-  config.vm.provision 'shell', path: 'install_user.sh', privileged: false
   config.vm.provider 'virtualbox' do |v|
     # v.gui = true
+
+    # --ioapic on : 2コア以上使う場合に有効にする
+    # v.customize ['modifyvm', :id, '--ioapic', 'on']
   end
+
+  config.vm.provision 'shell', path: 'script.sh'
+  config.vm.provision 'shell', path: 'create_swap.sh'
+  config.vm.provision 'shell', path: 'install_yaourt.sh', privileged: false
+  config.vm.provision 'shell', path: 'install_user.sh', privileged: false
 
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
