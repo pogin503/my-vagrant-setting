@@ -11,6 +11,10 @@ if [ $? -eq 1 ]; then
     cd yaourt
     makepkg -si --noconfirm --needed
     cd ..
+    rm package-query.tar.gz
+    rm -rf package-query
+    rm yaourt.tar.gz
+    rm -rf yaourt
 fi
 
 yaourt -Syu --devel --aur
