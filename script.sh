@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ -f /var/lib/pacman/db.lck ];then
+    rm /var/lib/pacman/db.lck
+    pacman -Syy
+fi
+
 pacman -Syu --noconfirm
 pacman -S base-devel --noconfirm --needed
 pacman -S ruby --noconfirm --needed
