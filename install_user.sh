@@ -8,19 +8,24 @@ curl -L http://install.ohmyz.sh | sh
 # cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 # chsh -s /bin/zsh
 
+# # ruby
+# gem i bundler
+
 # rbenv
 git clone git://github.com/sstephenson/rbenv.git .rbenv
-echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
-echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.profile
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshenv
+echo 'eval "$(rbenv init -)"' >> ~/.profile
+echo 'eval "$(rbenv init -)"' >> ~/.zshenv
 
 git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 
-git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 cp ~/.zshrc ~/.zshrc.orig
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
-chsh -s /bin/zsh
+sudo chsh -s $(which zsh) vagrant
 
-# git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+# cabal
+echo "export PATH=$HOME/.cabal/bin/:$PATH" >> $HOME/.profile
+echo "export PATH=$HOME/.cabal/bin/:$PATH" >> $HOME/.zshenv
 
-# # ruby
-# gem i bundler
+echo $PATH
