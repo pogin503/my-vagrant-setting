@@ -1,10 +1,7 @@
 ### https://raw.github.com/github/gitignore/master/Global/Vagrant.gitignore
 
 .vagrant/
-
-
 ### https://raw.github.com/github/gitignore/master/Haskell.gitignore
-
 dist
 cabal-dev
 *.o
@@ -16,10 +13,7 @@ cabal-dev
 .cabal-sandbox/
 cabal.sandbox.config
 cabal.config
-
-
 ### https://raw.github.com/github/gitignore/master/Global/Emacs.gitignore
-
 # -*- mode: gitignore; -*-
 *~
 \#*\#
@@ -29,32 +23,22 @@ cabal.config
 auto-save-list
 tramp
 .\#*
-
 # Org-mode
 .org-id-locations
 *_archive
-
 # flymake-mode
 *_flymake.*
-
 # eshell files
 /eshell/history
 /eshell/lastdir
-
 # elpa packages
 /elpa/
-
 # reftex files
 *.rel
-
-
 ### https://raw.github.com/github/gitignore/master/Global/Vim.gitignore
-
 [._]*.s[a-w][a-z]
 [._]s[a-w][a-z]
 *.un~
 Session.vim
 .netrwhist
-*~
-
-
+/cookbooks/
