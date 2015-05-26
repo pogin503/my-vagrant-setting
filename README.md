@@ -12,7 +12,7 @@ My vagrant example
 #How do I run the examples?
 
 ```
-git clone https://github.com/pogin503/my-vagrant-setting.git ~/workspace/vagrant/my-vagrant-setting
+git clone https://github.com/pogin503/my-vagrant-setting.git my-vagrant-setting
 ```
 
 ```
