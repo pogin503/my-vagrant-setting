@@ -12,12 +12,17 @@ sed -i -e 's/ZSH_THEME="robbyrussell"/ZSH_THEME="tjkirch"/' ~/.zshrc
 
 # # ruby
 # gem i bundler
+# change shell
+# cp ~/.zshrc ~/.zshrc.orig
+# cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+sudo chsh -s $(which zsh) vagrant
+
 
 # rbenv
 git clone git://github.com/sstephenson/rbenv.git .rbenv
-echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.profile
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
-echo 'eval "$(rbenv init -)"' >> ~/.profile
+echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 echo 'eval "$(rbenv init -)"' >> ~/.zshrc
 
 git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
@@ -31,13 +36,12 @@ rbenv versions
 # gem
 gem i bundler
 
-# change shell
-cp ~/.zshrc ~/.zshrc.orig
-cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
-sudo chsh -s $(which zsh) vagrant
 
 # cabal
-echo "export PATH=$HOME/.cabal/bin/:$PATH" >> $HOME/.profile
-echo "export PATH=$HOME/.cabal/bin/:$PATH" >> $HOME/.zshenv
+echo "export PATH=$HOME/.cabal/bin/:$PATH" >> $HOME/.bash_profile
+echo "export PATH=$HOME/.cabal/bin/:$PATH" >> $HOME/.zshrc
+
+echo 'export PATH="$HOME/.cask/bin:$PATH"' >> ~/.bash_profile
+echo 'export PATH="$HOME/.cask/bin:$PATH"' >> ~/.zshrc
 
 echo $PATH
