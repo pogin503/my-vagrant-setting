@@ -2,10 +2,13 @@
 
 if [ -f /var/lib/pacman/db.lck ];then
     rm /var/lib/pacman/db.lck
-    pacman -Syy
+    pacman -Sy
 fi
 
-pacman -Syu --noconfirm
+pacman -Sy --noconfirm
+pacman -S archlinux-keyring --noconfirm
+pacman -Su --noconfirm
+]pacman-db-upgrade
 pacman -S base-devel --noconfirm --needed
 pacman -S ruby --noconfirm --needed
 pacman -S python --noconfirm --needed
