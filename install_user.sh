@@ -36,10 +36,17 @@ rbenv versions
 # gem
 gem i bundler
 
+git clone git://github.com/pogin503/dot-files.git ~/dotfiles
+cd ~/dotfiles
+./bootstrap.sh
 
 # cabal
 echo "export PATH=$HOME/.cabal/bin/:$PATH" >> $HOME/.bash_profile
 echo "export PATH=$HOME/.cabal/bin/:$PATH" >> $HOME/.zshrc
+
+git clone git://github.com/pogin503/dot-emacs.git ~/.emacs.d
+cd ~/.emacs.d
+./bootstrap.sh
 
 echo 'export PATH="$HOME/.cask/bin:$PATH"' >> ~/.bash_profile
 echo 'export PATH="$HOME/.cask/bin:$PATH"' >> ~/.zshrc
