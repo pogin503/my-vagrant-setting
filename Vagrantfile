@@ -8,6 +8,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = 'arch64'
   config.vm.box_url = 'https://dl.dropboxusercontent.com/u/31112574/arch64-20130801.box'
 
+  if Vagrant.has_plugin?("vagrant-cachier")
+    config.cache.enable :pacman
+  end
+
   # config.vm.provision  'docker' do |d|
   #   # d.run 'arch',
   #   #   cmd: 'bash -l',
