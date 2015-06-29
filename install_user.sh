@@ -2,7 +2,6 @@
 
 # oh-my-zsh
 curl -L http://install.ohmyz.sh | sh
-sed -i -e 's/ZSH_THEME="robbyrussell"/ZSH_THEME="tjkirch"/' ~/.zshrc
 
 # oh-my-zsh (manual)
 # git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
@@ -10,8 +9,6 @@ sed -i -e 's/ZSH_THEME="robbyrussell"/ZSH_THEME="tjkirch"/' ~/.zshrc
 # cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 # chsh -s /bin/zsh
 
-# # ruby
-# gem i bundler
 # change shell
 # cp ~/.zshrc ~/.zshrc.orig
 # cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
