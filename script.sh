@@ -8,7 +8,7 @@ fi
 pacman -Sy --noconfirm
 pacman -S archlinux-keyring --noconfirm
 pacman -Su --noconfirm
-]pacman-db-upgrade
+pacman-db-upgrade
 pacman -S base-devel --noconfirm --needed
 pacman -S python --noconfirm --needed
 pacman -S clojure --noconfirm --needed
