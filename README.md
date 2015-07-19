@@ -1,7 +1,7 @@
 My vagrant example
 ==================
 
-- [Archlinux 2013-08-09](http://iweb.dl.sourceforge.net/project/vagrantarchlinx/2011.08.19/archlinux_2011.08.19.box)
+- [Archlinux 2013-08-09](https://dl.dropboxusercontent.com/u/31112574/arch64-20130801.box)
 
 ###First, install the applications.
 

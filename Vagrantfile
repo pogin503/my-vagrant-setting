@@ -33,6 +33,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision 'shell', path: 'create_swap.sh'
   config.vm.provision 'shell', path: 'install_yaourt.sh', privileged: false
   config.vm.provision 'shell', path: 'install_user.sh', privileged: false
+  config.vm.provision 'shell', path: 'setup-ats.sh', privileged: false
 
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
