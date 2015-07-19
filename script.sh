@@ -17,6 +17,9 @@ pacman -S emacs-nox vim --noconfirm --needed
 pacman -S ghc cabal-install happy --noconfirm --needed
 pacman -S virtualbox-guest-utils --noconfirm --needed
 
+# resize tmpfs
+mount -o remount,size=1G,noatime /tmp
+
 sed -i -e "s/#ja_JP.UTF-8/ja_JP.UTF-8/" /etc/locale.gen
 
 locale-gen
