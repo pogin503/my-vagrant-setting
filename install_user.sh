@@ -54,4 +54,13 @@ cd ~/.emacs.d
 echo 'export PATH="$HOME/.cask/bin:$PATH"' >> ~/.bash_profile
 echo 'export PATH="$HOME/.cask/bin:$PATH"' >> ~/.zshrc
 
+# for ats
+echo "export PATSHOME=$PATSHOME" >> ~/.bash_profile
+echo "export PATH=\${PATSHOME}/bin:\${PATH}" >> ~/.bash_profile
+echo "export PATSHOMERELOC=${PATSHOMERELOC}" >> ~/.bash_profile
+
+echo "export PATSHOME=$PATSHOME" >> ~/.zshrc
+echo "export PATH=\${PATSHOME}/bin:\${PATH}" >> ~/.zshrc
+echo "export PATSHOMERELOC=${PATSHOMERELOC}" >> ~/.zshrc
+
 echo $PATH
