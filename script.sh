@@ -10,6 +10,8 @@ pacman -S archlinux-keyring --noconfirm
 pacman -Su --noconfirm
 pacman-db-upgrade
 pacman -S base-devel --noconfirm --needed
+# systemd config
+sh -c 'echo "kernel.core_pattern=|/usr/lib/systemd/systemd-coredump %p %u %g %s %t %e" >> /etc/sysctl.d/50-coredump.conf'
 pacman -S python --noconfirm --needed
 pacman -S clojure --noconfirm --needed
 pacman -S git zsh tmux --noconfirm --needed
