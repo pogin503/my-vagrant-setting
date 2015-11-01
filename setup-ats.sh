@@ -19,11 +19,11 @@ cd ${PATSHOME}
 ./configure
 make
 
-echo "Add to .bashrc or .zshrc"
-echo "    export PATSHOME=$PATSHOME"
-echo "    export PATH=\${PATSHOME}/bin:\${PATH}"
-echo "    export PATSHOMERELOC=${PATSHOMERELOC}"
-echo "example:"
+echo 'Add to .bashrc or .zshrc'
+echo '    export PATSHOME=$HOME/atshome/ATS2-Postiats-0.2.1'
+echo '    export PATH=${PATSHOME}/bin:${PATH}'
+echo '    export PATSHOMERELOC=$HOME/atshome/ATS2-Postiats-contrib-0.1.12'
+echo 'example:'
 echo '    touch hello.dats'
 echo '    echo '\''implement main0 () = println! ("Hello world!")'\'' > hello.dats'
 echo '    patscc -o hello hello.dats'
