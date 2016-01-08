@@ -4,7 +4,7 @@
 curl -L http://install.ohmyz.sh | sh
 
 # oh-my-zsh (manual)
-# git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+# git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 # cp ~/.zshrc ~/.zshrc.orig
 # cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 # chsh -s /bin/zsh
@@ -16,8 +16,8 @@ sudo chsh -s $(which zsh) vagrant
 
 
 # rbenv
-git clone git://github.com/sstephenson/rbenv.git .rbenv
-git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+git clone https://github.com/sstephenson/rbenv.git .rbenv
+git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
@@ -35,7 +35,7 @@ rbenv versions
 # gem
 gem i bundler
 
-git clone git://github.com/pogin503/dot-files.git ~/dotfiles
+git clone https://github.com/pogin503/dot-files.git ~/dotfiles
 cd ~/dotfiles
 ./setup.sh
 
@@ -47,7 +47,7 @@ source $HOME/.bash_profile
 
 cabal update
 
-git clone git://github.com/pogin503/dot-emacs.git ~/.emacs.d
+git clone https://github.com/pogin503/dot-emacs.git ~/.emacs.d
 cd ~/.emacs.d
 ./setup.sh
 
