@@ -3,6 +3,8 @@ if [ ! ${EUID:-${UID}} = 0 ]; then
     exit 1
 fi
 
+# @see http://vmassuchetto.github.io/2013/08/14/reducing-a-vagrant-box-size/
+
 dir=`pwd | awk -F/ '{print $2}'`
 if [[ $dir = "vagrant" ]]; then
     echo "cp clean-box.sh ~/"

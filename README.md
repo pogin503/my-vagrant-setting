@@ -33,3 +33,9 @@ alias ga="git add ."
 alias gc="git commit -a"
 alias gp="git push"
 ```
+
+#Useful plugin
+
+```
+vagrant plugin install vagrant-cachier
+```

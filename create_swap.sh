@@ -10,11 +10,11 @@ swapoff -a
 [ -f /swapfile ] && rm -f /swapfile
 
 # Create swapfile of 2GB with block size 1MB
-#/bin/dd if=/dev/zero of=/swapfile bs=1024 count=2097152
+# /bin/dd if=/dev/zero of=/swapfile bs=1024 count=2097152
 
 # Create swapfile of 1GB with block size 1MB
 # /bin/dd if=/dev/zero of=/swapfile bs=1024 count=1048576
-fallocate -l 1G /swapfile
+fallocate -l 2G /swapfile
 
 # Set up the swap file
 /sbin/mkswap /swapfile
