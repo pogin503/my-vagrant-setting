@@ -54,13 +54,4 @@ cd ~/.emacs.d
 echo 'export PATH="$HOME/.cask/bin:$PATH"' >> ~/.bash_profile
 echo 'export PATH="$HOME/.cask/bin:$PATH"' >> ~/.zshrc
 
-# for ats
-echo 'export PATSHOME=$HOME/atshome/ATS2-Postiats-0.2.1' >> ~/.bash_profile
-echo 'export PATH=${PATSHOME}/bin:${PATH}' >> ~/.bash_profile
-echo 'export PATSHOMERELOC=$HOME/atshome/ATS2-Postiats-contrib-0.1.12' >> ~/.bash_profile
-
-echo 'export PATSHOME=$HOME/atshome/ATS2-Postiats-0.2.1' >> ~/.zshrc
-echo 'export PATH=${PATSHOME}/bin:${PATH}' >> ~/.zshrc
-echo 'export PATSHOMERELOC=$HOME/atshome/ATS2-Postiats-contrib-0.1.12' >> ~/.zshrc
-
 echo $PATH
