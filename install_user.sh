@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # oh-my-zsh
 curl -L http://install.ohmyz.sh | sh
@@ -12,7 +12,7 @@ curl -L http://install.ohmyz.sh | sh
 # change shell
 # cp ~/.zshrc ~/.zshrc.orig
 # cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
-sudo chsh -s $(which zsh) vagrant
+sudo chsh -s "$(which zsh)" vagrant
 
 
 # rbenv
@@ -24,11 +24,11 @@ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
 echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 echo 'eval "$(rbenv init -)"' >> ~/.zshrc
 
-source ~/.bash_profile
+source "$HOME"/.bash_profile
 
 # rbenv
-rbenv install 2.2.2
-rbenv global 2.2.2
+rbenv install 2.4.0
+rbenv global 2.4.0
 rbenv rehash
 rbenv versions
 
@@ -42,8 +42,6 @@ cd ~/dotfiles
 # cabal
 echo 'export PATH=$HOME/.cabal/bin/:$PATH' >> $HOME/.bash_profile
 echo 'export PATH=$HOME/.cabal/bin/:$PATH' >> $HOME/.zshrc
-
-source $HOME/.bash_profile
 
 cabal update
 
